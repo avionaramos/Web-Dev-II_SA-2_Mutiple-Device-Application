@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../server.js"></script>
+    <script src="../models/User.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/nike favicon.jpg">
+</head>
+
+<body>
+    <!--Header Section-->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/nike logo white.png" alt="Flare Sneakers Logo">
+              </a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#first">Home</a></li>
+                <li><a href="#second">Deals</a></li>
+                <li><a href="#Clothing">Clothing</a></li>
+                <li><a href="#jordan-image">Jordan</a></li>
+                <li><a href="#contact-page">Contact</a></li>
+            </ul>
+        </nav>
+        <!--Search Bar & Icons Section-->
+        <div class="search-bar-icons">
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <div class="suggestions"></div> <!-- Suggestions will appear here -->
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="icons">
+                <button id="cart" aria-label="Shopping Basket"><i class="fas fa-shopping-basket"></i></button>
+                <button id="user-icon" aria-label="User Profile"><i class="fas fa-user"></i></button>
+            </div>            
+        </div>
+
+        <div class="container" id="signup-container" style="display: none;">
+            <div class="close-btn-signup">
+                <button><i class="fas fa-times"></i></button>
+            </div>
+            <h2 class="sign-up-title">Enter your email to join us or sign in</h2>
+            <form id="signup-form" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button class="sign-up-button" type="submit">Sign Up</button>
+            </form>
+
+            <p id="response-message"></p>
+        </div>
+
+        <div class="hamburger-menu">
+            <button class="hamburger-button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <!--First Image-->
+    <section id="first">
+        <div class="first-image">
+            <div class="square"></div>
+            <img src="images/air legend blue.png" alt="">
+        </div>
+    </section>
+
+    <section id="hero-content">
+        <div class="hero-content">
+            <p>Air Jordan 11 ‘Legend Blue’</p>
+            <h1>Legends Never Get Old</h1>
+            <p>Turning heads and taking titles since the original’s debut, the AJ11 is back in its famed white and blue.
+            </p>
+        </div>
+    </section>
+    <!--Hot-deals Section-->
+    <section id="second">
+        <div class="tag">
+            <h1>HOT DEALS</h1>
+            <div class="arrow left-arrow">◀</div>
+            <div class="arrow right-arrow">▶</div>
+        </div>
+        <div class="carousel-container">
+            <div class="hot-deals">
+                <div class="hot-deal-images">
+                    <div class="heart-icon">♡</div>
+                    <div class="image">
+                        <img src="images/nike cortez.png" alt="Product Image">
+                    </div>
+                    <div class="circle"></div> <!-- Circle moved inside hot-deal-images -->
+                    <h2>Nike Cortez 23 Premium Leather</h2>
+                    <p>Shoes</p>
+                    <div class="price-cart">
+                        <h3>AED 329.00</h3>
+                    </div>
+                </div>
+
+                <div class="hot-deal-images">
+                    <div class="heart-icon">♡</div>
+                    <div class="image">
+                        <img src="images/air force dance.png" alt="Product Image">
+                    </div>
+                    <div class="circle"></div> <!-- Circle moved inside hot-deal-images -->
+                    <h2>Nike Air Force 1 Dance</h2>
+                    <p>Women's Shoes</p>
+                    <div class="price-cart">
+                        <h3>AED 625.00</h3>
+                    </div>
+                </div>
+
+                <div class="hot-deal-images">
+                    <div class="heart-icon">♡</div>
+                    <div class="image">
+                        <img src="images/nike dunk low blue.png" alt="Product Image">
+                    </div>
+                    <div class="heart-icon">♡</div>
+                    <div class="circle"></div> <!-- Circle moved inside hot-deal-images -->
+                    <h2>Nike Low Dunk Blue</h2>
+                    <p>Older Kid's Shoes</p>
+                    <div class="price-cart">
+                        <h3>AED 329.00</h3>
+                    </div>
+                </div>
+
+                <div class="hot-deal-images">
+                    <div class="heart-icon">♡</div>
+                    <div class="image">
+                        <img src="images/nike vomero 5.png" alt="Product Image">
+                    </div>
+                    <div class="circle"></div> <!-- Circle moved inside hot-deal-images -->
+                    <h2>Nike Zoom Vomero 5</h2>
+                    <p>Men's Shoes</p>
+                    <div class="price-cart">
+                        <h3>AED 800.00</h3>
+                    </div>
+                </div>
+
+                <div class="hot-deal-images">
+                    <div class="heart-icon">♡</div>
+                    <div class="image">
+                        <img src="images/Nike Shox R4.png" alt="Product Image">
+                    </div>
+                    <div class="circle"></div> <!-- Circle moved inside hot-deal-images -->
+                    <h2>Nike Shox R4</h2>
+                    <p>Men's Shoes</p>
+                    <div class="price-cart">
+                        <h3>AED 750.00</h3>
+                    </div>
+                </div>
+
+                <div class="hot-deal-images">
+                    <div class="heart-icon">♡</div>
+                    <div class="image">
+                        <img src="images/Nike Killshot.png" alt="Product Image">
+                    </div>
+                    <div class="circle"></div> <!-- Circle moved inside hot-deal-images -->
+                    <h2>Nike Killshot 2</h2>
+                    <p>Men's Shoes</p>
+                    <div class="price-cart">
+                        <h3>AED 299.00</h3>
+                    </div>
+                </div>
+
+                <div class="hot-deal-images">
+                    <div class="heart-icon">♡</div>
+                    <div class="image">
+                        <img src="images/Nike Shadow.png" alt="Product Image">
+                    </div>
+                    <div class="circle"></div> <!-- Circle moved inside hot-deal-images -->
+                    <h2>Nike Air Force 1 Shadow</h2>
+                    <p>Women's Shoes</p>
+                    <div class="price-cart">
+                        <h3>AED 449.00</h3>
+                    </div>
+                </div>
+
+                <div class="hot-deal-images">
+                    <div class="heart-icon">♡</div>
+                    <div class="image">
+                        <img src="images/V2K Run.png" alt="Product Image">
+                    </div>
+                    <div class="circle"></div> <!-- Circle moved inside hot-deal-images -->
+                    <h2>Nike V2K Run</h2>
+                    <p>Men's Shoes</p>
+                    <div class="price-cart">
+                        <h3>AED 419.00</h3>
+                    </div>
+                </div>
+
+                <div class="hot-deal-images">
+                    <div class="heart-icon">♡</div>
+                    <div class="image">
+                        <img src="images/Women Running Shoes.png" alt="Product Image">
+                    </div>
+                    <div class="circle"></div> <!-- Circle moved inside hot-deal-images -->
+                    <h2>Nike Free Metcon 6</h2>
+                    <p>Women's Workout Shoes</p>
+                    <div class="price-cart">
+                        <h3>AED 469.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Clothing Section-->
+    <section id="Clothing">
+        <h1>CLOTHING</h1>
+        <p>Discover our exclusive collection of handcrafted clothing made from recycled materials.</p>
+        <div class="nike-clothes">
+            <div class="nike-clothing-image">
+                <img src="images/flight essential.png" alt="Nike Air Force 1 Low">
+                <div class="clothing-name-price">
+                    <h2>Jordan Flight Essentials</h2>
+                    <p>AED 275.00</p>
+                </div>
+            </div>
+
+            <div class="nike-clothing-image">
+                <img src="images/windrunner women.jpeg" alt="Nike Air Force 1 Low">
+                <div class="clothing-name-price">
+                    <h2>Nike Windrunner</h2>
+                    <p>AED 425.00</p>
+                </div>
+            </div>
+
+            <div class="nike-clothing-image">
+                <img src="images/nike tech.jpg" alt="Nike Air Force 1 Low">
+                <div class="clothing-name-price">
+                    <h2>Nike Tech</h2>
+                    <p>AED 600.00</p>
+                </div>
+            </div>
+
+            <div class="nike-clothing-image">
+                <img src="images/nike sportswear.png" alt="Nike Air Force 1 Low">
+                <div class="clothing-name-price">
+                    <h2>Nike Sportswear</h2>
+                    <p>AED 350.00</p>
+                </div>
+            </div>
+
+            <div class="nike-clothing-image">
+                <img src="images/jordan brooklyn.png" alt="Nike Air Force 1 Low">
+                <div class="clothing-name-price">
+                    <h2>Jordan Brooklyn</h2>
+                    <p>AED 550.00</p>
+                </div>
+            </div>
+
+            <div class="nike-clothing-image">
+                <img src="images/jordan flight mvp.png" alt="Nike Air Force 1 Low">
+                <div class="clothing-name-price">
+                    <h2>Jordan Flight MVP</h2>
+                    <p>AED 275.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Jordan Products Section-->
+    <section id="jordan-image">
+        <div class="jordan-image-container">
+            <img src="images/jordan bg.jpg" alt="">
+        </div>
+        <div class="jordan-words">
+            <h3>Jordan Heir Series</h3>
+            <h1>HOLD COURT</h1>
+            <p>Inspired by the women’s game, and built for anyone ready to take the throne.</p>
+        </div>
+    </section>
+
+    <section id="third">
+        <div class="jordan">
+            <h1>JORDAN PRODUCTS</h1>
+            <p>Unveiling Jordan: A Land of Timeless Wonders and Boundless Adventure</p>
+        </div>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="products">
+                    <div class="price">
+                        <img src="images/jordan white logo.png" alt="">
+                        <h3>AED 875.00</h3>
+                    </div>
+                    <div class="product-image">
+                        <img src="images/Jordan Spizike Low.png " alt="">
+                    </div>
+                    <div class="product-name">
+                        <h2>Jordan Spizike Low</h2>
+                        <p>Men's Shoes</p>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="price">
+                        <img src="images/jordan white logo.png" alt="">
+                        <h3>AED 875.00</h3>
+                    </div>
+                    <div class="product-image">
+                        <img src="images/Jumpman MVP.png" alt="">
+                    </div>
+                    <div class="product-name">
+                        <h2>Jumpman MVP</h2>
+                        <p>Men's Shoes</p>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="price">
+                        <img src="images/jordan white logo.png" alt="">
+                        <h3>AED 550.00</h3>
+                    </div>
+                    <div class="product-image">
+                        <img src="images/Jordan Flight Court.png" alt="">
+                    </div>
+                    <div class="product-name">
+                        <h2>Jordan Flight Court</h2>
+                        <p>Women's Shoes</p>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="price">
+                        <img src="images/jordan white logo.png" alt="">
+                        <h3>AED 725.00</h3>
+                    </div>
+                    <div class="product-image">
+                        <img src="images/Air Jordan Legacy 312 Low.png" alt="">
+                    </div>
+                    <div class="product-name">
+                        <h2>Air Jordan Legacy 312 Low</h2>
+                        <p>Women's Shoes</p>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="price">
+                        <img src="images/jordan white logo.png" alt="">
+                        <h3>AED 475.00</h3>
+                    </div>
+                    <div class="product-image">
+                        <img src="images/Air Jordan 1 Low.png" alt="">
+                    </div>
+                    <div class="product-name">
+                        <h2>Air Jordan 1 Low</h2>
+                        <p>Older Kid's Shoes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--More Section-->    
+    <section id="explore-more">
+        <div class="title">
+            <h1>EXPLORE MORE</h1>
+        </div>
+        <div class="images">
+            <div class="square"></div>
+            <img src="images/nike women model.jpeg" alt="">
+            <h2>WOMEN</h2>
+        </div>
+
+        <div class="images">
+            <div class="square"></div>
+            <img src="images/kid model.jpg" alt="">
+            <h2>KIDS</h2>
+        </div>
+
+        <div class="images">
+            <div class="square"></div>
+            <img src="images/men model.webp" alt="">
+            <h2>MEN</h2>
+        </div>
+    </section>
+    <!--Memebership Section-->    
+    <section id="membership">
+        <div class="member">
+            <div class="square"></div>
+            <img src="images/nike membership.webp" alt="">
+            <h1>IT'S BETTER AS A MEMBER</h1>
+            <p>Move, Shop, and Celebrate with the best of Nike.</p>
+            <button>Sign Up</button>
+            <a href="https://www.nike.ae/en/home/">
+                <button>Learn More</button>
+            </a>
+        </div>
+    </section>
+    <!--Footer Section-->    
+    <footer id="contact-page">
+        <div class="column-one">
+            <img src="images/nike logo orig.png" alt="">
+            <h3>FIND A STORE</h3>
+        </div>
+        <div class="column-two">
+            <h3>GET HELP</h3>
+            <p>Order Status</p>
+            <p>Dispatch and Delivery</p>
+            <p>Returns</p>
+            <p>Payment Options</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="column-three">
+            <h3>ABOUT NIKE</h3>
+            <p>News</p>
+            <p>Careers</p>
+            <p>Investors</p>
+            <p>Sustainability</p>
+        </div>
+        <div class="column-four">
+            <h3>NIKE APPS</h3>
+            <p>Nike Run Club</p>
+            <p>Nike Training Club</p>
+        </div>
+        <div class="social-media"> 
+            <a href="https://x.com/Nike" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/nike" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@nike" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/nike?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>          
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
