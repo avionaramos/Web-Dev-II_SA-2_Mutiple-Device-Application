@@ -1169,7 +1169,7 @@ footer img {
 }
 
 /* Tablet (Below 1024px) */
-@media screen and (max-width: 1023px) and (min-width: 539px) {
+@media screen and (max-width: 1023px){
     .nav ul,/* Hide Navigation and Search Bar */
     .search-bar,
     .icons {
@@ -1375,7 +1375,7 @@ footer img {
     }
 }
 
-@media screen and (max-width: 540px) and (min-width: 579px){
+@media screen and (max-width: 540px){
     /* Further adjustments for small mobile screens */
     .logo img {
         height: 20px;
